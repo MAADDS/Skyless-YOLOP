@@ -1,0 +1,125 @@
+2021-11-18 20:21:34,344 Namespace(conf_thres=0.001, dataDir='', iou_thres=0.6, local_rank=-1, logDir='runs/', modelDir='', prevModelDir='', sync_bn=False)
+2021-11-18 20:21:34,344 AUTO_RESUME: False
+CUDNN:
+  BENCHMARK: True
+  DETERMINISTIC: False
+  ENABLED: True
+DATASET:
+  COLOR_RGB: False
+  DATAROOT: lib/dataset/images
+  DATASET: BddDataset
+  DATA_FORMAT: jpg
+  FLIP: True
+  HSV_H: 0.015
+  HSV_S: 0.7
+  HSV_V: 0.4
+  LABELROOT: lib/dataset/det_annotations
+  LANEROOT: lib/dataset/ll_seg_annotations
+  MASKROOT: lib/dataset/da_seg_annotations
+  ORG_IMG_SIZE: [720, 1280]
+  ROT_FACTOR: 10
+  SCALE_FACTOR: 0.25
+  SELECT_DATA: False
+  SHEAR: 0.0
+  TEST_SET: val
+  TRAIN_SET: train
+  TRANSLATE: 0.1
+DEBUG: False
+GPUS: (0, 1)
+LOG_DIR: runs/
+LOSS:
+  BOX_GAIN: 0.05
+  CLS_GAIN: 0.5
+  CLS_POS_WEIGHT: 1.0
+  DA_SEG_GAIN: 0.2
+  FL_GAMMA: 0.0
+  LL_IOU_GAIN: 0.2
+  LL_SEG_GAIN: 0.2
+  LOSS_NAME: 
+  MULTI_HEAD_LAMBDA: None
+  OBJ_GAIN: 1.0
+  OBJ_POS_WEIGHT: 1.0
+  SEG_POS_WEIGHT: 1.0
+MODEL:
+  EXTRA:
+    
+  HEADS_NAME: ['']
+  IMAGE_SIZE: [640, 640]
+  NAME: 
+  PRETRAINED: 
+  PRETRAINED_DET: 
+  STRU_WITHSHARE: False
+NEED_AUTOANCHOR: False
+PIN_MEMORY: False
+PRINT_FREQ: 20
+TEST:
+  BATCH_SIZE_PER_GPU: 24
+  MODEL_FILE: 
+  NMS_CONF_THRESHOLD: 0.001
+  NMS_IOU_THRESHOLD: 0.6
+  PLOTS: True
+  SAVE_JSON: False
+  SAVE_TXT: False
+TRAIN:
+  ANCHOR_THRESHOLD: 4.0
+  BATCH_SIZE_PER_GPU: 24
+  BEGIN_EPOCH: 0
+  DET_ONLY: False
+  DRIVABLE_ONLY: False
+  ENC_DET_ONLY: False
+  ENC_SEG_ONLY: False
+  END_EPOCH: 240
+  GAMMA1: 0.99
+  GAMMA2: 0.0
+  IOU_THRESHOLD: 0.2
+  LANE_ONLY: False
+  LR0: 0.001
+  LRF: 0.2
+  MOMENTUM: 0.937
+  NESTEROV: True
+  OPTIMIZER: adam
+  PLOT: True
+  SEG_ONLY: False
+  SHUFFLE: True
+  VAL_FREQ: 1
+  WARMUP_BIASE_LR: 0.1
+  WARMUP_EPOCHS: 3.0
+  WARMUP_MOMENTUM: 0.8
+  WD: 0.0005
+WORKERS: 8
+num_seg_class: 2
+2021-11-18 20:21:34,366 Using torch 1.7.1 CUDA:0 (NVIDIA GeForce GTX 1080 Ti, 11170MB)
+2021-11-18 20:21:34,367                   CUDA:1 (NVIDIA GeForce GTX 1080 Ti, 11178MB)
+2021-11-18 20:21:34,367 
+2021-11-18 20:21:58,648 anchors loaded successfully
+2021-11-18 20:21:58,670 tensor([[[0.3750, 1.1250],
+         [0.6250, 1.3750],
+         [0.5000, 2.5000]],
+
+        [[0.4375, 1.1250],
+         [0.3750, 2.4375],
+         [0.7500, 1.9375]],
+
+        [[0.5938, 1.5625],
+         [1.1875, 2.5312],
+         [2.1250, 4.9062]]], device='cuda:0')
+2021-11-18 20:22:12,921 Epoch: [1][0/1459]	Time 14.250s (14.250s)	Speed 3.4 samples/s	Data 6.528s (6.528s)	Loss nan (nan)
+2021-11-18 20:22:12,922 NaN or Inf found in input tensor.
+2021-11-18 20:22:37,044 Epoch: [1][20/1459]	Time 38.373s (26.498s)	Speed 1.3 samples/s	Data 37.236s (25.001s)	Loss nan (nan)
+2021-11-18 20:22:37,044 NaN or Inf found in input tensor.
+2021-11-18 20:23:00,795 Epoch: [1][40/1459]	Time 62.124s (38.358s)	Speed 0.8 samples/s	Data 60.959s (37.021s)	Loss nan (nan)
+2021-11-18 20:23:00,796 NaN or Inf found in input tensor.
+2021-11-18 20:23:24,709 Epoch: [1][60/1459]	Time 86.038s (50.284s)	Speed 0.6 samples/s	Data 84.877s (49.000s)	Loss nan (nan)
+2021-11-18 20:23:24,709 NaN or Inf found in input tensor.
+2021-11-18 20:23:48,459 Epoch: [1][80/1459]	Time 109.788s (62.195s)	Speed 0.4 samples/s	Data 108.623s (60.940s)	Loss nan (nan)
+2021-11-18 20:23:48,459 NaN or Inf found in input tensor.
+2021-11-18 20:24:12,240 Epoch: [1][100/1459]	Time 133.569s (74.092s)	Speed 0.4 samples/s	Data 132.397s (72.854s)	Loss nan (nan)
+2021-11-18 20:24:12,240 NaN or Inf found in input tensor.
+2021-11-18 20:24:36,045 Epoch: [1][120/1459]	Time 157.374s (85.992s)	Speed 0.3 samples/s	Data 156.207s (84.765s)	Loss nan (nan)
+2021-11-18 20:24:36,045 NaN or Inf found in input tensor.
+2021-11-18 20:24:59,947 Epoch: [1][140/1459]	Time 181.276s (97.898s)	Speed 0.3 samples/s	Data 180.113s (96.679s)	Loss nan (nan)
+2021-11-18 20:24:59,947 NaN or Inf found in input tensor.
+2021-11-18 20:25:23,828 Epoch: [1][160/1459]	Time 205.157s (109.812s)	Speed 0.2 samples/s	Data 203.952s (108.598s)	Loss nan (nan)
+2021-11-18 20:25:23,828 NaN or Inf found in input tensor.
+2021-11-18 20:25:47,643 Epoch: [1][180/1459]	Time 228.972s (121.725s)	Speed 0.2 samples/s	Data 227.819s (120.517s)	Loss nan (nan)
+2021-11-18 20:25:47,644 NaN or Inf found in input tensor.
